@@ -2,5 +2,7 @@
     display: none !important;
     visibility: hidden !important;
 }
-
+#timer{
+    transform: translateX(250%);
+}
 /* .classname<-class #classname<-id*/

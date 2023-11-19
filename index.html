@@ -15,14 +15,16 @@
 <button id="start-button" onclick = "play_quiz()" class = "btn btn-primary">Start</button>
 </div>
 <!--Elements for the Quiz itself-->
-<div class = "d-flex flex-column" id= "question">
-<h2>{{Time Left}}</h2>
-<h1>{{Question Text}}</h1>
-<button class = "btn btn-primary col-2">{{Option 1}}</button>
-<button class = "btn btn-primary col-2">{{Option 2}}</button>
-<button class = "btn btn-primary col-2">{{Option 3}}</button>
-<button class = "btn btn-primary">{{Option 4}}</button>
-<p>{{Feedback}}</p>
+<div class = "d-flex flex-column justify-content-center align-items-center" id= "question">
+<h2 id = "timer">{{Time Left}}</h2>
+<h1 class = "m-2">{{Question Text}}</h1>
+<!-- btn btn primary refers the style. whereas col-3 refers to how many colums of space.
+m-1 refers to the margin inbetween buttons-->
+<button class = "btn btn-primary col-3 m-1">{{Option 1}}</button>
+<button class = "btn btn-primary col-3 m-1" >{{Option 2}}</button>
+<button class = "btn btn-primary col-3 m-1">{{Option 3}}</button>
+<button class = "btn btn-primary col-3 m-1">{{Option 4}}</button>
+<p class = "m-2">{{Feedback}}</p>
 </div>
 <!--Elements for the Ending Page-->
 <!--Elements for the Leader board-->
