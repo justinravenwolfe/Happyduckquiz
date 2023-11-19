@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="index.js"></script>
 </head>
@@ -9,12 +9,21 @@
 <!--Elements for the Landing Page-->
 <!--dx means flex box.justify content center means everthing in the div should be centered.flex colum makes it block style -->
 <!-- vh 100 pushes it from the top to the the middle by 100-->
-<div class = "vh-100 d-flex flex-column justify-content-center align-items-center">
-<h1>Yankees Quiz</h1>
-<p>Test if you are a real Yankees fan</p>
+<div id = "landing" class = "vh-100 d-flex flex-column justify-content-center align-items-center">
+<h1 id="quiz_name">Yankees Quiz</h1>
+<p id = "quiz_desc">Test if you are a real Yankees fan</p>
 <button id="start-button" onclick = "play_quiz()" class = "btn btn-primary">Start</button>
 </div>
 <!--Elements for the Quiz itself-->
+<div class = "d-flex flex-column" id= "question">
+<h2>{{Time Left}}</h2>
+<h1>{{Question Text}}</h1>
+<button class = "btn btn-primary col-2">{{Option 1}}</button>
+<button class = "btn btn-primary col-2">{{Option 2}}</button>
+<button class = "btn btn-primary col-2">{{Option 3}}</button>
+<button class = "btn btn-primary">{{Option 4}}</button>
+<p>{{Feedback}}</p>
+</div>
 <!--Elements for the Ending Page-->
 <!--Elements for the Leader board-->
 
