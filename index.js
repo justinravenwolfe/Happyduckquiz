@@ -21,21 +21,39 @@ var correct_answers = [1, 1, 0, 2];
 //Load the current question/answers, move to the next question
 function play_quiz()
 {
-//The landing screen needs to dissapear
 var landing = document.getElementById("landing");
-//.style.visibility
-//.style.display 
+    //.style.visibility
+    //.style.display 
 landing.style.visibility = "hidden";
 landing.style.display = "none"; 
+var questions = document.getElementById("questions");
+questions.id = ""; 
+questions.style.marginTop = "-35%"; 
+//The landing screen needs to dissapear
+
 //Question screen needs to show
 
 //Question data needs to load in 
+var prompt = document.getElementById("prompt");
+var opt1 = document.getElementById("opt1");
+var opt2 = document.getElementById("opt2")
+var opt3 = document.getElementById("opt3");
+var opt4 = document.getElementById("opt4")
+//Changing the current prompt to the current question
+prompt.innerHTML = question_list[question_index];
+//Going into the correct list for our current question, pick the first option
+opt1.innerHTML = choices[question_index][0]; 
+opt2.innerHTML = choices[question_index][1]; 
+opt3.innerHTML = choices[question_index][2];
+opt4.innerHTML = choices[question_index][3];
 
 //Timer needs to start 
+
 }
 //Return whether the user has given the correct answer or not
 function check_answer(answer_id)
 {
+//Move to the next question
 
 }
 //Decrementing the timer 
