@@ -1,6 +1,6 @@
 //Var<- type indicator, means variable
 // within this java script im grabbing that button
-var submit_button = document.getElementById("start-button");
+var start_button = document.getElementById("start-button");
 var score = 0;
 //120 seconds total for the quiz
 var time = 120; 
@@ -16,14 +16,16 @@ var choices = [["Brooklyn","Bronx", "Queens", "NYC"],
 ["Player1", "Player2", "Player3", "Player4"],
 ["White with Blue pin-stripes", "Yellow with pokka dots", "solid red", "green"],
 [20,30,27,6]];
-var correct_answers = ["Bronx", "Player2", "White with Blue pin-stripes", 27];
+var correct_answers = [1, 1, 0, 2];
 //Functions
 //Load the current question/answers, move to the next question
-function play_quiz(){
+function play_quiz()
+{
 
 }
 //Return whether the user has given the correct answer or not
-function check_answer(){
+function check_answer(answer_id)
+{
 
 }
 
