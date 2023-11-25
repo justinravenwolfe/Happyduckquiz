@@ -21,11 +21,25 @@ var correct_answers = [1, 1, 0, 2];
 //Load the current question/answers, move to the next question
 function play_quiz()
 {
+//The landing screen needs to dissapear
+var landing = document.getElementById("landing");
+//.style.visibility
+//.style.display 
+landing.style.visibility = "hidden";
+landing.style.display = "none"; 
+//Question screen needs to show
 
+//Question data needs to load in 
+
+//Timer needs to start 
 }
 //Return whether the user has given the correct answer or not
 function check_answer(answer_id)
 {
+
+}
+//Decrementing the timer 
+function set_timer(){
 
 }
 
