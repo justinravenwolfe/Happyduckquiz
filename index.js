@@ -48,17 +48,28 @@ opt3.innerHTML = choices[question_index][2];
 opt4.innerHTML = choices[question_index][3];
 
 //Timer needs to start 
-
+//1000ms = 1 second
+//setInterval is going to run function every second;
+setInterval(run_timer, 1000); 
 }
 //Return whether the user has given the correct answer or not
 function check_answer(answer_id)
 {
+//Is answer_id the same as the id of the correct answer
+
+
 //Move to the next question
 
 }
 //Decrementing the timer 
-function set_timer(){
-
+function run_timer()
+{
+//All function commands in here
+var timer= document.getElementById("timer");
+//Print current amount of time to screen
+timer.innerHTML = time; 
+//subtract time by 1 
+ time=time-1;
 }
 
 //DOM<- Document Object Model, In HTML ever item is a in object<- data/behavior. Using DOM
