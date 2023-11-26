@@ -19,28 +19,45 @@ var choices = [["Brooklyn","Bronx", "Queens", "NYC"],
 var correct_answers = [1, 1, 0, 2];
 
 //Variables for the leader board
-var leader_board = [["AS", 10],["JR",15],["JD",20],["SS", 0]]; 
+
 //[Initials, Score]
 //[AS, 15]<- how we are storing data
 //Functions
 //Load the current question/answers, move to the next question
-function show_leaderboard(init)
+function show_leaderboard()
 {
+    var leader_board = [["AS", 10],["JR",15],["JD",20],["SS", 0]]; 
+    console.log(leader_board); 
     //Ending screen dissapear
     var ending_screen = document.getElementById("end"); 
+    var input = document.getElementById("initials");
     ending_screen.id = "ending_screen"; 
     //Add their score/intitials to the leader_board
-    leader_board.append([init,score]);
+    var new_entry = [input.value,score];
+    leader_board.push(new_entry);
     //Build the table
-    var table_content = "";
+    var table_rows = "";
     //i->index
+    //Looping through all the scores/initials
     for(var i = 0; i < leader_board.length; i++)
     {
-        
+        //<tr><d>Intitials<td> <td>Score<td></tr>
+        //Grabbing the current initial
+        var curr_init = leader_board[i][0];
+        //Grabbing the current score
+        var curr_score = leader_board[i][1];
+        //Making a row entry from those variables
+        var curr_content = "<tr><td>" + curr_init+"</td><td>"+curr_score+"</td></tr>";
+        //Adding that row entry all other rows
+        table_rows+=curr_content; 
     }
-
-
-
+//Showing those rows on the front-end
+var score_container = document.getElementById("score_container");
+score_container.innerHTML = table_rows;
+//Showing the leader_board to the user
+var leader_board = document.getElementById("leader_board");
+leader_board.id = "";
+leader_board.style.marginTop = "-35%";
 }
 function show_ending(){
 //Questions dissapear
@@ -127,7 +144,7 @@ function run_timer()
 //All function commands in here
 var timer= document.getElementById("timer");
 //Print current amount of time to screen
-timer.innerHTML = time; 
+timer.textContent = time; 
 //subtract time by 1 
  time=time-1;
 }
