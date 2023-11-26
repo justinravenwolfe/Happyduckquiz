@@ -25,11 +25,27 @@ m-1 refers to the margin inbetween buttons-->
 <button id = "opt2" onclick="check_answer(1)" class = "btn btn-primary col-3 m-1" >{{Option 2}}</button>
 <button id = "opt3" onclick = "check_answer(2)" class = "btn btn-primary col-3 m-1">{{Option 3}}</button>
 <button id = "opt4" onclick = "check_answer(3)" class = "btn btn-primary col-3 m-1">{{Option 4}}</button>
-<p class = "m-2">{{Feedback}}</p>
+<p id="feedback" class = "m-2">{{Feedback}}</p>
 </div>
-<!--Elements for the Ending Page-->
-<!--Elements for the Leader board-->
 
+
+<!--Elements for the Ending Page-->
+<div id = "ending_screen">
+<!--Your Score is:-->
+<h2>Your score is:</h2>
+<h3 id="score">{{Score}}</h3>
+<!--Box for Initials-->
+<label for = "initials">Enter Your Initials:</label>
+<!--Text Box-->
+<input placeholder ="Initials" name = "initials" id = "initials" type = "text">
+<!--Submit Button-->
+<button class = "btn btn-primary">Submit</button>
+</div>
+<!--Elements for the Leader board-->
+<div id = "leader_board">
+
+  
+</div>
 </body>
 </html>
  

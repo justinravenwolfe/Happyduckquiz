@@ -17,8 +17,39 @@ var choices = [["Brooklyn","Bronx", "Queens", "NYC"],
 ["White with Blue pin-stripes", "Yellow with pokka dots", "solid red", "green"],
 [20,30,27,6]];
 var correct_answers = [1, 1, 0, 2];
+
+//Variables for the leader board
+var leader_board = []; 
+//[Initials, Score]
+//[AS, 15]<- how we are storing data
 //Functions
 //Load the current question/answers, move to the next question
+function show_ending(){
+//Questions dissapear
+var questions = document.getElementById("questions");
+questions.style.visibility = "hidden";
+questions.style.display = "none"; 
+//Make the ending appear
+//Loading in all elements in the ending screen
+var ending_screen = document.getElementById("ending_screen"); 
+ending_screen.id = ""; 
+ending_screen.style.marginTop = "-35%"; 
+
+}
+function display_question(){
+var prompt = document.getElementById("prompt");
+var opt1 = document.getElementById("opt1");
+var opt2 = document.getElementById("opt2")
+var opt3 = document.getElementById("opt3");
+var opt4 = document.getElementById("opt4")
+//Changing the current prompt to the current question
+prompt.innerHTML = question_list[question_index];
+//Going into the correct list for our current question, pick the first option
+opt1.innerHTML = choices[question_index][0]; 
+opt2.innerHTML = choices[question_index][1]; 
+opt3.innerHTML = choices[question_index][2];
+opt4.innerHTML = choices[question_index][3];
+}
 function play_quiz()
 {
 var landing = document.getElementById("landing");
@@ -32,20 +63,9 @@ questions.style.marginTop = "-35%";
 //The landing screen needs to dissapear
 
 //Question screen needs to show
-
+display_question();
 //Question data needs to load in 
-var prompt = document.getElementById("prompt");
-var opt1 = document.getElementById("opt1");
-var opt2 = document.getElementById("opt2")
-var opt3 = document.getElementById("opt3");
-var opt4 = document.getElementById("opt4")
-//Changing the current prompt to the current question
-prompt.innerHTML = question_list[question_index];
-//Going into the correct list for our current question, pick the first option
-opt1.innerHTML = choices[question_index][0]; 
-opt2.innerHTML = choices[question_index][1]; 
-opt3.innerHTML = choices[question_index][2];
-opt4.innerHTML = choices[question_index][3];
+
 
 //Timer needs to start 
 //1000ms = 1 second
@@ -56,9 +76,27 @@ setInterval(run_timer, 1000);
 function check_answer(answer_id)
 {
 //Is answer_id the same as the id of the correct answer
-
+var feedback= document.getElementById("feedback");
+//Are they correct
+if(correct_answers[question_index] == answer_id)
+{
+feedback.innerHTML = "Correct";
+score=score+5;
+//var_name++, var_name+=value
+}else{
+  feedback.innerHTML = "Incorrect";
+}
+//Return a response depending on if its wrong/right
 
 //Move to the next question
+if(question_index == 3)
+{
+    show_ending();
+}else{
+    question_index=question_index+1;
+    display_question(); 
+}
+//Make the next prompt show up on the screen;
 
 }
 //Decrementing the timer 
