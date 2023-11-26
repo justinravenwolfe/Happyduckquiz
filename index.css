@@ -1,3 +1,7 @@
+#leader_board{
+    display: none !important;
+    visibility: hidden !important;
+}
 #ending_screen{
     display: none !important;
     visibility: hidden !important;

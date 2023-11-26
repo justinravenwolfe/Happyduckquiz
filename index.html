@@ -39,14 +39,22 @@ m-1 refers to the margin inbetween buttons-->
 <!--Text Box-->
 <input placeholder ="Initials" name = "initials" id = "initials" type = "text">
 <!--Submit Button-->
-<button class = "btn btn-primary">Submit</button>
+<button onclick = "show_leaderboard(initials)"id ="submit_init" class = "btn btn-primary">Submit</button>
 </div>
 <!--Elements for the Leader board-->
 <div id = "leader_board">
+<h1>Leaderboard:</h1>
+<table class = "table table-striped table-responsive">
+  <thead>
 
+    <tr><td>Intials:</td><td>Score:</td></tr>
+    </thead>
+    <tbody id = "score_container">
+
+      </tbody>
   
-</div>
-</body>
+</table></table>
+  
 </html>
  
  

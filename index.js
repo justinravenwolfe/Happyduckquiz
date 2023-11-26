@@ -19,22 +19,43 @@ var choices = [["Brooklyn","Bronx", "Queens", "NYC"],
 var correct_answers = [1, 1, 0, 2];
 
 //Variables for the leader board
-var leader_board = []; 
+var leader_board = [["AS", 10],["JR",15],["JD",20],["SS", 0]]; 
 //[Initials, Score]
 //[AS, 15]<- how we are storing data
 //Functions
 //Load the current question/answers, move to the next question
+function show_leaderboard(init)
+{
+    //Ending screen dissapear
+    var ending_screen = document.getElementById("end"); 
+    ending_screen.id = "ending_screen"; 
+    //Add their score/intitials to the leader_board
+    leader_board.append([init,score]);
+    //Build the table
+    var table_content = "";
+    //i->index
+    for(var i = 0; i < leader_board.length; i++)
+    {
+        
+    }
+
+
+
+}
 function show_ending(){
 //Questions dissapear
-var questions = document.getElementById("questions");
+var questions = document.getElementById("question");
 questions.style.visibility = "hidden";
 questions.style.display = "none"; 
 //Make the ending appear
 //Loading in all elements in the ending screen
 var ending_screen = document.getElementById("ending_screen"); 
-ending_screen.id = ""; 
+ending_screen.id = "end";
 ending_screen.style.marginTop = "-35%"; 
-
+//Show their score
+var score_show =document.getElementById("score");
+//<h3><h3> <- <h3>NEW TEXT<h3>
+score_show.innerHTML= score;
 }
 function display_question(){
 var prompt = document.getElementById("prompt");
@@ -59,6 +80,7 @@ landing.style.visibility = "hidden";
 landing.style.display = "none"; 
 var questions = document.getElementById("questions");
 questions.id = ""; 
+questions.id = "question"; 
 questions.style.marginTop = "-35%"; 
 //The landing screen needs to dissapear
 
