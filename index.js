@@ -24,9 +24,14 @@ var correct_answers = [1, 1, 0, 2];
 //[AS, 15]<- how we are storing data
 //Functions
 //Load the current question/answers, move to the next question
+function scoreDescending(list) 
+{
+    return list.slice().sort((a, b) => b[1] - a[1]);
+}
 function show_leaderboard()
 {
     var leader_board = [["AS", 10],["JR",15],["JD",20],["SS", 0]]; 
+    leader_board = scoreDescending(leader_board); 
     console.log(leader_board); 
     //Ending screen dissapear
     var ending_screen = document.getElementById("end"); 
