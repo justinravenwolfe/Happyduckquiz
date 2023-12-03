@@ -31,7 +31,6 @@ function scoreDescending(list)
 function show_leaderboard()
 {
     var leader_board = [["AS", 10],["JR",15],["JD",20],["SS", 0]]; 
-    leader_board = scoreDescending(leader_board); 
     console.log(leader_board); 
     //Ending screen dissapear
     var ending_screen = document.getElementById("end"); 
@@ -40,6 +39,7 @@ function show_leaderboard()
     //Add their score/intitials to the leader_board
     var new_entry = [input.value,score];
     leader_board.push(new_entry);
+    leader_board = scoreDescending(leader_board); 
     //Build the table
     var table_rows = "";
     //i->index
