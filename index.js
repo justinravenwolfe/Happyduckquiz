@@ -13,7 +13,7 @@ var question_list = ["In which borrow is Yankees stadium located?",
 //The multiple choice answers corresponding to each question
 // we are using interger for one questions because it has has to do with numbers
 var choices = [["Brooklyn","Bronx", "Queens", "NYC"],
-["Player1", "Player2", "Player3", "Player4"],
+["Derek Jeter", "Ken Griffey Jr", "Paul O'Neal", "Chuck Knoblauch"],
 ["White with Blue pin-stripes", "Yellow with pokka dots", "solid red", "green"],
 [20,30,27,6]];
 var correct_answers = [1, 1, 0, 2];
